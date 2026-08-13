@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | Hotel Pet</title>
+</head>
+
+<body>
+    <main>
+        <section aria-labelledby="titulo-login">
+            <!-- Imagem principal da tela de login -->
+            <div>
+                <img
+                    src="imagens/hotel-pet-login.jpg"
+                    alt="Cachorro hospedado no Hotel Pet"
+                >
+            </div>
+
+            <!-- Área do formulário -->
+            <div>
+                <header>
+                    <h1 id="titulo-login">Hotel Pet</h1>
+                    <p>Entre na sua conta para acessar o sistema.</p>
+                </header>
+
+                <form action="reservas.html" method="get">
+                    <div>
+                        <label for="login">Login</label>
+                        <input
+                            type="text"
+                            id="login"
+                            name="login"
+                            placeholder="Digite seu login"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Digite sua senha"
+                            autocomplete="current-password"
+                            minlength="6"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <input
+                            type="checkbox"
+                            id="manter-conectado"
+                            name="manter-conectado"
+                        >
+                        <label for="manter-conectado">
+                            Mantenha-me conectado
+                        </label>
+
+                        <a href="recuperar-senha.html">
+                            Esqueci a senha
+                        </a>
+                    </div>
+
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <div>
+                    <p>Ou entre com</p>
+
+                    <nav aria-label="Opções de login com redes sociais">
+                        <ul>
+                            <li>
+                                <a href="#" aria-label="Entrar com Facebook">
+                                    Facebook
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" aria-label="Entrar com X">
+                                    X
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" aria-label="Entrar com Google">
+                                    Google
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <footer>
+                    <p>
+                        Ainda não possui cadastro?
+                        <a href="criar-conta.html">Criar uma conta</a>
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
