@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Novo Pet | Hotel Pet</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Pet</h1>
+
+        <div>
+            <img
+                src="imagens/icone-usuario.png"
+                alt="Foto de perfil de João da Silva"
+            >
+            <span>João da Silva</span>
+        </div>
+    </header>
+
+    <aside>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li>
+                    <a href="pets.html">Pets</a>
+                </li>
+                <li>
+                    <a href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <nav aria-label="Navegação estrutural">
+            <p>
+                <a href="reservas.html">Home</a> /
+                <a href="pets.html">Pet</a> /
+                Novo Pet
+            </p>
+        </nav>
+
+        <section aria-labelledby="titulo-novo-pet">
+            <h2 id="titulo-novo-pet">Novo Pet</h2>
+
+            <form action="pets.html" method="get">
+                <div>
+                    <label for="nome">Nome *</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome do pet"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="tipo">Tipo *</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="">Selecione o tipo</option>
+                        <option value="cachorro">Cachorro</option>
+                        <option value="gato">Gato</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="raca">Raça *</label>
+                    <input
+                        type="text"
+                        id="raca"
+                        name="raca"
+                        placeholder="Digite a raça do pet"
+                        required
+                    >
+                </div>
+
+                <div>
+                    <label for="tamanho">Tamanho *</label>
+                    <select id="tamanho" name="tamanho" required>
+                        <option value="">Selecione o tamanho</option>
+                        <option value="pequeno">Pequeno</option>
+                        <option value="medio">Médio</option>
+                        <option value="grande">Grande</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="imagem">Imagem</label>
+                    <input
+                        type="file"
+                        id="imagem"
+                        name="imagem"
+                        accept="image/*"
+                    >
+                </div>
+
+                <div>
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

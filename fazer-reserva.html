@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fazer Reserva | Hotel Pet</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Pet</h1>
+
+        <div>
+            <img
+                src="imagens/icone-usuario.png"
+                alt="Foto de perfil de João da Silva"
+            >
+            <span>João da Silva</span>
+        </div>
+    </header>
+
+    <aside>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li>
+                    <a href="pets.html">Pets</a>
+                </li>
+                <li>
+                    <a href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <nav aria-label="Navegação estrutural">
+            <p>
+                <a href="reservas.html">Home</a> /
+                <a href="reservas.html">Reservas</a> /
+                Nova reserva
+            </p>
+        </nav>
+
+        <section aria-labelledby="titulo-fazer-reserva">
+            <h2 id="titulo-fazer-reserva">Fazer reserva</h2>
+
+            <form action="reservas.html" method="get">
+                <div>
+                    <label for="pet">Pet *</label>
+                    <select id="pet" name="pet" required>
+                        <option value="">Selecione um pet</option>
+                        <option value="max" selected>Max</option>
+                    </select>
+                </div>
+
+                <fieldset>
+                    <legend>Período *</legend>
+
+                    <div>
+                        <label for="data-entrada">Data de entrada</label>
+                        <input
+                            type="date"
+                            id="data-entrada"
+                            name="data-entrada"
+                            value="2021-05-02"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label for="data-saida">Data de saída</label>
+                        <input
+                            type="date"
+                            id="data-saida"
+                            name="data-saida"
+                            value="2021-05-07"
+                            required
+                        >
+                    </div>
+                </fieldset>
+
+                <div>
+                    <label for="notas">Notas</label>
+                    <textarea
+                        id="notas"
+                        name="notas"
+                        rows="5"
+                        placeholder="Digite informações importantes sobre o pet."
+                    ></textarea>
+                </div>
+
+                <p>
+                    Total das diárias:
+                    <strong>R$ 40,00</strong>
+                </p>
+
+                <div>
+                    <button type="submit">Salvar</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

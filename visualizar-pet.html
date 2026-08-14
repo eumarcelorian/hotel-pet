@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Visualizar Pet | Hotel Pet</title>
+</head>
+
+<body>
+    <header>
+        <h1>Hotel Pet</h1>
+
+        <div>
+            <img
+                src="imagens/icone-usuario.png"
+                alt="Foto de perfil de João da Silva"
+            >
+            <span>João da Silva</span>
+        </div>
+    </header>
+
+    <aside>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li>
+                    <a href="pets.html">Pets</a>
+                </li>
+                <li>
+                    <a href="reservas.html">Reservas</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <nav aria-label="Navegação estrutural">
+            <p>
+                <a href="reservas.html">Home</a> /
+                <a href="pets.html">Pets</a> /
+                Ver pet
+            </p>
+        </nav>
+
+        <section aria-labelledby="titulo-ver-pet">
+            <h2 id="titulo-ver-pet">Ver pet</h2>
+
+            <p>
+                <a href="editar-pet.html">Editar</a>
+
+                <a href="pets.html">Deletar</a>
+            </p>
+
+            <dl>
+                <div>
+                    <dt>Proprietário:</dt>
+                    <dd>José da Silva</dd>
+                </div>
+
+                <div>
+                    <dt>Id:</dt>
+                    <dd>1234509876</dd>
+                </div>
+
+                <div>
+                    <dt>Nome:</dt>
+                    <dd>Max</dd>
+                </div>
+
+                <div>
+                    <dt>Tipo:</dt>
+                    <dd>Cachorro</dd>
+                </div>
+
+                <div>
+                    <dt>Raça:</dt>
+                    <dd>Pastor Alemão</dd>
+                </div>
+
+                <div>
+                    <dt>Imagem:</dt>
+                    <dd>
+                        <img
+                            src="imagens/max.jpg"
+                            alt="Foto do pet Max"
+                        >
+                    </dd>
+                </div>
+            </dl>
+
+            <section aria-labelledby="titulo-reservas">
+                <h3 id="titulo-reservas">Reservas:</h3>
+
+                <ul>
+                    <li>
+                        <a href="ver-reserva.html">
+                            02/05/2021 - 07/05/2021 (completa)
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="ver-reserva.html">
+                            02/05/2021 - 07/05/2021 (em andamento)
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <p>
+                <a href="pets.html">← Voltar</a>
+            </p>
+        </section>
+    </main>
+</body>
+</html>
