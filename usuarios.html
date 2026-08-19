@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários | Hotel Pet</title>
+
+    <link rel="stylesheet" href="usuarios.css">
+</head>
+
+<body>
+    <div class="painel">
+        <aside class="menu-lateral">
+            <a class="logo" href="reservas.html">Hotel Pet</a>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="pets.html">🐾 Pets</a></li>
+                    <li><a class="ativo" href="usuarios.html">♙ Usuários</a></li>
+                    <li><a href="configuracoes.html">⚙ Configurações</a></li>
+                    <li><a href="reservas.html">▣ Reservas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="conteudo">
+            <header class="cabecalho">
+                <a href="editar-perfil.html" class="perfil">
+                    <span class="foto-perfil">👤</span>
+                    João da Silva
+                </a>
+            </header>
+
+            <main>
+                <p class="caminho">
+                    <a href="reservas.html">Home</a> / Usuários
+                </p>
+
+                <section class="cartao" aria-labelledby="titulo-usuarios">
+                    <h1 id="titulo-usuarios">Usuários</h1>
+
+                    <div class="acoes-superiores">
+                        <a class="botao botao-contorno" href="cadastrar-usuario.html">
+                            ♙ Novo
+                        </a>
+
+                        <button class="botao botao-contorno" type="button">
+                            ♙ Remover
+                        </button>
+
+                        <button class="botao botao-contorno" type="button">
+                            ✓ Mudar status
+                        </button>
+                    </div>
+
+                    <div class="visualizar-por">
+                        <span>Visualizar por:</span>
+                        <button class="aba ativa" type="button">Usuários</button>
+                        <button class="aba" type="button">Função</button>
+                    </div>
+
+                    <form class="filtros" action="usuarios.html" method="get">
+                        <div class="campo">
+                            <label for="id">Id</label>
+                            <input type="text" id="id" name="id">
+                        </div>
+
+                        <fieldset class="campo periodo">
+                            <legend>Criado em</legend>
+
+                            <input
+                                type="date"
+                                id="data-inicial"
+                                name="data-inicial"
+                                aria-label="Data inicial"
+                            >
+
+                            <input
+                                type="date"
+                                id="data-final"
+                                name="data-final"
+                                aria-label="Data final"
+                            >
+                        </fieldset>
+
+                        <div class="campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome" name="nome">
+                        </div>
+
+                        <div class="campo">
+                            <label for="status">Status</label>
+                            <select id="status" name="status">
+                                <option value="">Todos</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="inativo">Inativo</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="funcao">Função</label>
+                            <select id="funcao" name="funcao">
+                                <option value="">Todas</option>
+                                <option value="gerente">Gerente</option>
+                                <option value="funcionario">Funcionário</option>
+                                <option value="cliente">Cliente</option>
+                            </select>
+                        </div>
+
+                        <div class="botoes-filtro">
+                            <button class="botao botao-azul" type="submit">
+                                🔍 Pesquisar
+                            </button>
+
+                            <button class="botao botao-contorno" type="reset">
+                                ↻ Limpar
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="tabela-responsiva">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Selecionar</th>
+                                    <th scope="col">Foto</th>
+                                    <th scope="col">E-mail ↓</th>
+                                    <th scope="col">Nome ↓</th>
+                                    <th scope="col">Função ↓</th>
+                                    <th scope="col">Status ↓</th>
+                                    <th scope="col">Criado em ↓</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-1">
+                                        <label class="texto-oculto" for="usuario-1">
+                                            Selecionar João da Silva
+                                        </label>
+                                    </td>
+                                    <td><span class="foto-tabela">👤</span></td>
+                                    <td>joaodasilva@pet.com</td>
+                                    <td>João da Silva</td>
+                                    <td>Gerente</td>
+                                    <td><span class="status ativo">Ativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="editar-usuario.html">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-2">
+                                        <label class="texto-oculto" for="usuario-2">
+                                            Selecionar Maria da Silva
+                                        </label>
+                                    </td>
+                                    <td><span class="foto-tabela">👤</span></td>
+                                    <td>maria@pet.com</td>
+                                    <td>Maria da Silva</td>
+                                    <td>Funcionário</td>
+                                    <td><span class="status inativo">Inativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="editar-usuario.html">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" id="usuario-3">
+                                        <label class="texto-oculto" for="usuario-3">
+                                            Selecionar José da Silva
+                                        </label>
+                                    </td>
+                                    <td><span class="foto-tabela">👤</span></td>
+                                    <td>josedasilva@pet.com</td>
+                                    <td>José da Silva</td>
+                                    <td>Cliente</td>
+                                    <td><span class="status ativo">Ativo</span></td>
+                                    <td>19/02/2020</td>
+                                    <td>
+                                        <a href="editar-usuario.html">Editar</a>
+                                        <a href="#">Visualizar</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
