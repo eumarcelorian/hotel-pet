@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar reserva finalizada | Hotel Pet</title>
+
+    <link rel="stylesheet" href="editar-reserva-finalizada.css">
+</head>
+
+<body>
+    <div class="painel">
+        <aside class="menu-lateral">
+            <a class="logo" href="reservas.html">Hotel Pet</a>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li><a href="pets.html">🐾 Pets</a></li>
+                    <li><a href="usuarios.html">♙ Usuários</a></li>
+                    <li><a href="configuracoes.html">⚙ Configurações</a></li>
+                    <li><a class="ativo" href="reservas.html">▣ Reservas</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="conteudo">
+            <header class="cabecalho">
+                <a href="editar-perfil.html" class="perfil">
+                    <span class="foto-perfil">👤</span>
+                    João da Silva
+                </a>
+            </header>
+
+            <main>
+                <p class="caminho">
+                    <a href="reservas.html">Home</a> /
+                    <a href="reservas.html">Reservas</a> /
+                    Editar reserva
+                </p>
+
+                <section class="cartao" aria-labelledby="titulo-editar">
+                    <h1 id="titulo-editar">Editar reserva</h1>
+
+                    <form action="reservas.html" method="get">
+                        <div class="campo">
+                            <label for="proprietario">Proprietário *</label>
+                            <input
+                                type="text"
+                                id="proprietario"
+                                name="proprietario"
+                                value="José da Silva"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="pet">Pet *</label>
+                            <input
+                                type="text"
+                                id="pet"
+                                name="pet"
+                                value="Max"
+                                required
+                            >
+                        </div>
+
+                        <fieldset class="periodo">
+                            <legend>Período *</legend>
+
+                            <div>
+                                <label class="texto-oculto" for="data-entrada">
+                                    Data de entrada
+                                </label>
+                                <input
+                                    type="date"
+                                    id="data-entrada"
+                                    name="data-entrada"
+                                    value="2021-05-02"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label class="texto-oculto" for="data-saida">
+                                    Data de saída
+                                </label>
+                                <input
+                                    type="date"
+                                    id="data-saida"
+                                    name="data-saida"
+                                    value="2021-05-07"
+                                    required
+                                >
+                            </div>
+                        </fieldset>
+
+                        <div class="campo">
+                            <label for="notas">Notas</label>
+                            <textarea id="notas" name="notas" rows="4">Informações sobre a estadia do pet.</textarea>
+                        </div>
+
+                        <div class="campo">
+                            <label for="status">Status *</label>
+                            <select id="status" name="status" required>
+                                <option value="reservada">Reservada</option>
+                                <option value="andamento">Em andamento</option>
+                                <option value="finalizada" selected>Finalizada</option>
+                            </select>
+                        </div>
+
+                        <p class="total">
+                            Total das diárias:
+                            <strong>R$ 40,00</strong>
+                        </p>
+
+                        <div class="nota-fiscal">
+                            <label class="botao-nota" for="nota">
+                                📄 Adicionar nota fiscal
+                            </label>
+
+                            <input
+                                type="file"
+                                id="nota"
+                                name="nota"
+                                accept=".pdf,image/*"
+                            >
+
+                            <a href="#" class="arquivo-anexado">
+                                📎 recibo.pdf
+                            </a>
+                        </div>
+
+                        <div class="acoes">
+                            <button class="botao-salvar" type="submit">
+                                💾 Salvar
+                            </button>
+
+                            <button class="botao-limpar" type="reset">
+                                ↻ Limpar
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
