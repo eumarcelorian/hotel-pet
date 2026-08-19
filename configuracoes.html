@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações | Hotel Pet</title>
+
+    <link rel="stylesheet" href="configuracoes.css">
+</head>
+
+<body>
+    <div class="painel-gerente">
+        <aside class="menu-lateral">
+            <a class="logo" href="reservas.html">Hotel Pet</a>
+
+            <nav aria-label="Menu principal">
+                <ul>
+                    <li>
+                        <a href="pets.html">
+                            <span aria-hidden="true">🐾</span>
+                            Pets
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="usuarios.html">
+                            <span aria-hidden="true">👤</span>
+                            Usuários
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="ativo" href="configuracoes.html">
+                            <span aria-hidden="true">⚙</span>
+                            Configurações
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="reservas.html">
+                            <span aria-hidden="true">▣</span>
+                            Reservas
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="conteudo">
+            <header class="cabecalho">
+                <a class="perfil" href="editar-perfil.html">
+                    <span class="icone-perfil" aria-hidden="true">👤</span>
+                    <span>João da Silva</span>
+                </a>
+            </header>
+
+            <main>
+                <p class="caminho">
+                    <a href="reservas.html">Home</a> / Configurações
+                </p>
+
+                <section class="cartao-configuracoes" aria-labelledby="titulo-configuracoes">
+                    <h1 id="titulo-configuracoes">Configurações</h1>
+
+                    <form action="configuracoes.html" method="get">
+                        <div class="campo">
+                            <label for="valor-diaria">Valor da diária</label>
+                            <input
+                                type="text"
+                                id="valor-diaria"
+                                name="valor-diaria"
+                                value="R$ 10,00"
+                                inputmode="decimal"
+                                required
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="vagas">Vagas disponíveis</label>
+                            <input
+                                type="number"
+                                id="vagas"
+                                name="vagas"
+                                value="3"
+                                min="0"
+                                required
+                            >
+                        </div>
+
+                        <div class="acoes">
+                            <button class="botao-salvar" type="submit">
+                                <span aria-hidden="true">💾</span>
+                                Salvar
+                            </button>
+
+                            <button class="botao-limpar" type="reset">
+                                <span aria-hidden="true">↻</span>
+                                Limpar
+                            </button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
