@@ -1,0 +1,59 @@
+@import url("app.css");
+
+main > section form {
+    max-width: 650px;
+}
+
+main > section form > div,
+main > section form > fieldset {
+    margin-bottom: 20px;
+}
+
+main > section form label,
+main > section form legend {
+    display: block;
+    margin-bottom: 8px;
+}
+
+main > section form fieldset {
+    display: flex;
+    gap: 20px;
+    border: none;
+}
+
+main > section form fieldset div {
+    flex: 1;
+}
+
+main > section form textarea {
+    resize: vertical;
+}
+
+main > section form p {
+    margin: 28px 0;
+    font-size: 1.1rem;
+}
+
+main > section form strong {
+    margin-left: 8px;
+    color: var(--azul);
+}
+
+main > section form > div:last-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+main > section form button[type="reset"] {
+    color: var(--azul);
+    background-color: var(--branco);
+    border: 2px solid var(--azul);
+}
+
+@media (max-width: 600px) {
+    main > section form fieldset,
+    main > section form > div:last-child {
+        flex-direction: column;
+    }
+}

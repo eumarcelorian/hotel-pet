@@ -1,0 +1,29 @@
+@import url("pets.css");
+
+main form fieldset {
+    grid-template-columns: 1fr 1fr;
+}
+
+main form fieldset fieldset {
+    display: flex;
+    grid-column: auto;
+    gap: 10px;
+    padding: 0;
+    background: transparent;
+}
+
+main form fieldset fieldset legend {
+    margin-bottom: 7px;
+}
+
+main form fieldset fieldset input {
+    min-width: 0;
+}
+
+table {
+    min-width: 900px;
+}
+
+body > main > section {
+    overflow-x: auto;
+}

@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --azul: #155eef;
+    --azul-escuro: #0b42b8;
+    --azul-claro: #e8f0ff;
+    --rosa-claro: #fce7f3;
+    --texto: #1f2937;
+    --texto-claro: #6b7280;
+    --borda: #d9dee8;
+    --branco: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background: linear-gradient(135deg, var(--azul-claro), var(--rosa-claro));
+}
+
+main {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 24px;
+}
+
+main > section {
+    display: grid;
+    grid-template-columns: 1fr 430px;
+    width: min(100%, 1100px);
+    min-height: 620px;
+    overflow: hidden;
+    background-color: var(--branco);
+    border-radius: 24px;
+    box-shadow: 0 20px 45px rgba(21, 94, 239, 0.2);
+}
+
+/* Área da imagem */
+main > section > div:first-child {
+    display: grid;
+    place-items: center;
+    padding: 40px;
+    color: var(--branco);
+    text-align: center;
+    background:
+        radial-gradient(circle at top left, #60a5fa, transparent 45%),
+        linear-gradient(135deg, var(--azul-escuro), var(--azul));
+}
+
+main > section > div:first-child img {
+    display: none;
+}
+
+main > section > div:first-child::after {
+    content: "🐾\A\A Crie sua conta e faça parte\A da família Hotel Pet.";
+    white-space: pre-line;
+    font-size: 1.45rem;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* Formulário */
+main > section > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 48px;
+}
+
+header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    color: var(--azul-escuro);
+    font-size: 2.4rem;
+}
+
+header p {
+    color: var(--texto-claro);
+    line-height: 1.5;
+}
+
+form > div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    color: var(--texto);
+    font-size: 1rem;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px var(--azul-claro);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    color: var(--branco);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: var(--azul);
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--azul-escuro);
+    transform: translateY(-2px);
+}
+
+footer {
+    margin-top: 28px;
+    text-align: center;
+    color: var(--texto-claro);
+}
+
+footer a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 16px;
+    }
+
+    main > section {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    main > section > div:first-child {
+        min-height: 180px;
+    }
+
+    main > section > div:first-child::after {
+        font-size: 1.1rem;
+    }
+
+    main > section > div:last-child {
+        padding: 36px 28px;
+    }
+}

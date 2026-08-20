@@ -1,0 +1,5 @@
+@import url("cadastrar-pet.css");
+
+main > section form {
+    max-width: 650px;
+}

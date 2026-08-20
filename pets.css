@@ -1,0 +1,86 @@
+@import url("app.css");
+
+main > section > p {
+    margin-bottom: 24px;
+}
+
+main > section > p a {
+    display: inline-block;
+    padding: 10px 14px;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+main form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 35px;
+    padding: 25px;
+    background-color: #f3f4f6;
+    border: none;
+}
+
+main form legend {
+    grid-column: 1 / -1;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+main form label {
+    display: block;
+    margin-bottom: 7px;
+}
+
+main form button {
+    width: fit-content;
+}
+
+main form button[type="reset"] {
+    color: var(--azul);
+    background-color: var(--branco);
+    border: 2px solid var(--azul);
+}
+
+table {
+    width: 100%;
+    margin-top: 32px;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 10px;
+    text-align: left;
+    border-bottom: 5px solid var(--branco);
+}
+
+th {
+    color: var(--azul);
+    background-color: #e5e7eb;
+}
+
+td {
+    background-color: #f3f4f6;
+}
+
+td input[type="checkbox"] {
+    width: auto;
+    accent-color: var(--azul);
+}
+
+td label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+td a {
+    margin-right: 10px;
+    color: #b23cff;
+    text-decoration: none;
+}
